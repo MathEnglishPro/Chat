@@ -1,0 +1,39 @@
+{
+  "name": "ChatUser",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string",
+      "description": "Unique username for the chat user"
+    },
+    "display_name": {
+      "type": "string",
+      "description": "Optional display name shown in chat"
+    },
+    "password_hash": {
+      "type": "string",
+      "description": "Hashed password"
+    },
+    "is_admin": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this user is an admin"
+    },
+    "is_banned": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this user is banned from the platform"
+    },
+    "joined_chats": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of chat room IDs the user has joined"
+    }
+  },
+  "required": [
+    "username",
+    "password_hash"
+  ]
+}
