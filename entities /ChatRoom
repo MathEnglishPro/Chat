@@ -1,0 +1,36 @@
+{
+  "name": "ChatRoom",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the chat room"
+    },
+    "access_code": {
+      "type": "string",
+      "description": "Unique 6-character access code"
+    },
+    "created_by": {
+      "type": "string",
+      "description": "Username of the creator (admin)"
+    },
+    "members": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of usernames who are members"
+    },
+    "kicked_users": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of usernames kicked from this chat"
+    }
+  },
+  "required": [
+    "name",
+    "access_code"
+  ]
+}
