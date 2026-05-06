@@ -1,0 +1,36 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "chat_room_id": {
+      "type": "string",
+      "description": "ID of the chat room this message belongs to"
+    },
+    "sender_username": {
+      "type": "string",
+      "description": "Username of the sender"
+    },
+    "sender_display_name": {
+      "type": "string",
+      "description": "Display name of the sender at time of sending"
+    },
+    "content": {
+      "type": "string",
+      "description": "Message content"
+    },
+    "message_type": {
+      "type": "string",
+      "enum": [
+        "text",
+        "system"
+      ],
+      "default": "text",
+      "description": "Type of message"
+    }
+  },
+  "required": [
+    "chat_room_id",
+    "sender_username",
+    "content"
+  ]
+}
